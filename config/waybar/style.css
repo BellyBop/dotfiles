@@ -13,49 +13,53 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-    background: rgba(10, 10, 10, 0.9);
-    border: 2px solid rgba(102, 0, 204, 0.5);
+    background: rgba(30, 30, 46, 0.95);
+    border: 2px solid rgba(203, 166, 247, 0.6);
     border-radius: 20px;
     padding: 2px 12px;
     margin: 0;
 }
 
 #workspaces button {
-    color: #555555;
+    color: #6c7086;
     padding: 0 6px;
     background: transparent;
     border-radius: 50%;
 }
 
 #workspaces button.active {
-    color: #cc00cc;
+    color: #cba6f7;
 }
 
 #workspaces button:hover {
-    background: rgba(102, 0, 204, 0.2);
-    color: #e6e7e7;
+    background: rgba(203, 166, 247, 0.2);
+    color: #cdd6f4;
 }
 
 #clock {
-    color: #e6e7e7;
+    color: #cdd6f4;
     font-weight: bold;
+    padding: 0 12px;
 }
 
 #cpu, #memory {
-    color: #8800cc;
+    color: #89b4fa;
     padding: 0 6px;
+    font-weight: bold;
 }
 
 #pulseaudio {
-    color: #cc00cc;
+    color: #cba6f7;
     padding: 0 6px;
+    font-weight: bold;
 }
 
 #mpris {
-    color: #e6e7e7;
+    color: #cdd6f4;
     padding: 0 6px;
     margin-right: 8px;
-    border-right: 1px solid rgba(102, 0, 204, 0.3);
+    border-right: 1px solid rgba(203, 166, 247, 0.3);
+    font-weight: bold;
 }
 
 #tray {
