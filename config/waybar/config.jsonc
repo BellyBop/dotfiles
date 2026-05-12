@@ -48,7 +48,8 @@
     "format": "󰎆 {title} - {artist}",
     "format-paused": "󰏸 {title} - {artist}",
     "max-length": 40,
-    "interval": 1
+    "interval": 1,
+    "player": "spotify"
     },
 
     "tray": {
