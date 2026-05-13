@@ -34,7 +34,7 @@
     },
 
     "custom/gpu": {
-        "format": "YOUR_ICON {}",
+        "format": "󰨇 {}",
         "interval": 2,
         "tooltip": true,
         "return-type": "json",

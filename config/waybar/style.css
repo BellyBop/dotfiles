@@ -42,15 +42,10 @@ window#waybar {
     padding: 0 12px;
 }
 
-#cpu, #memory {
+#cpu, #memory, #custom-gpu{
     color: #89b4fa;
     padding: 0 6px;
     font-weight: bold;
-}
-
-#custom-gpu {
-    color: #a6e3a1;
-    padding: 0 6px;
 }
 
 #pulseaudio {
