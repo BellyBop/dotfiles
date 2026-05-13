@@ -34,11 +34,11 @@
     },
 
     "custom/gpu": {
-        "format": "󰨇 {}",
+        "format": "YOUR_ICON {}",
         "interval": 2,
         "tooltip": true,
         "return-type": "json",
-        "exec": "nvidia-smi --query-gpu=utilization.gpu,temperature.gpu,memory.used,memory.total,power.draw --format=csv,noheader,nounits | awk -F',' '{printf \"{\\\"text\\\":\\\"%s%%\\\",\\\"tooltip\\\":\\\"Temp: %s°C\\\\nVRAM: %.1f/%.1fGB\\\\nPower: %sW\\\"}\", $1, $2, $3/1024, $4/1024, $5}'"
+        "exec": "nvidia-smi --query-gpu=utilization.gpu,temperature.gpu,memory.used,memory.total,power.draw --format=csv,noheader,nounits | awk -F', ' '{printf \"{\\\"text\\\":\\\"%s%%\\\",\\\"tooltip\\\":\\\"Temp: %s°C\\\\nVRAM: %.1f/%.1fGB\\\\nPower: %sW\\\"}\", $1, $2, $3/1024, $4/1024, $5}'"
     },
 
     "memory": {
