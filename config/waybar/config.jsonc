@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["mpris", "pulseaudio", "cpu", "memory", "tray"],
+    "modules-right": ["mpris", "pulseaudio", "cpu","custom/gpu","memory", "tray"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -29,12 +29,20 @@
     },
 
     "cpu": {
-        "format": "󰻠 {usage}%",
+        "format": " {usage}%",
         "interval": 2
     },
 
+    "custom/gpu": {
+        "format": "󰨇 {}",
+        "interval": 2,
+        "tooltip": true,
+        "return-type": "json",
+        "exec": "nvidia-smi --query-gpu=utilization.gpu,temperature.gpu,memory.used,memory.total,power.draw --format=csv,noheader,nounits | awk -F',' '{printf \"{\\\"text\\\":\\\"%s%%\\\",\\\"tooltip\\\":\\\"Temp: %s°C\\\\nVRAM: %.1f/%.1fGB\\\\nPower: %sW\\\"}\", $1, $2, $3/1024, $4/1024, $5}'"
+    },
+
     "memory": {
-        "format": "󰍛 {percentage}%",
+        "format": " {percentage}%",
         "interval": 2
     },
 

@@ -48,6 +48,11 @@ window#waybar {
     font-weight: bold;
 }
 
+#custom-gpu {
+    color: #a6e3a1;
+    padding: 0 6px;
+}
+
 #pulseaudio {
     color: #cba6f7;
     padding: 0 6px;
