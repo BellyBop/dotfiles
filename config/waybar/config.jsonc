@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["mpris", "pulseaudio", "cpu","custom/gpu","memory", "tray"],
+    "modules-right": ["mpris", "wireplumber", "cpu","custom/gpu","memory", "tray"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -29,12 +29,12 @@
     },
 
     "cpu": {
-        "format": " {usage}%",
+        "format": "<span color='#cba6f7'></span> {usage}%",
         "interval": 2
     },
 
     "custom/gpu": {
-        "format": "󰨇 {}",
+        "format": "<span color='#cba6f7'>󰨇</span> {}",
         "interval": 2,
         "tooltip": true,
         "return-type": "json",
@@ -42,19 +42,21 @@
     },
 
     "memory": {
-        "format": " {percentage}%",
+        "format": "<span color='#cba6f7'></span> {percentage}%",
         "interval": 2
     },
 
-    "pulseaudio": {
-        "format": "󰕾 {volume}%",
-        "format-muted": "󰖁",
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    "wireplumber": {
+        "format": "<span color='#cba6f7'>󰕾</span> {volume}%",
+        "format-muted": "<span color='#cba6f7'>󰖁</span>",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
 
     "mpris": {
-    "format": "󰎆 {title} - {artist}",
-    "format-paused": "󰏸 {title} - {artist}",
+    "format": "<span color='#cba6f7'>󰎆</span> {title} - {artist}",
+    "format-paused": "<span color='#cba6f7'>󰏸</span> {title} - {artist}",
     "max-length": 40,
     "interval": 1,
     "player": "spotify"
