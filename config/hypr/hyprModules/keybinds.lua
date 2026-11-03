@@ -1,7 +1,7 @@
 -- Keybindings
 
 local terminal    = "kitty"
-local fileManager  = "nautilus"
+local fileManager  = "nautilus --new-window"
 local menu         = "wofi --show drun"
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
