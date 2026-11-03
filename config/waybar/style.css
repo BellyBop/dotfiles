@@ -20,18 +20,18 @@ window#waybar {
     margin: 0;
 }
 
-#workspaces button {
+.ws {
     color: #6c7086;
     padding: 0 6px;
     background: transparent;
     border-radius: 50%;
 }
 
-#workspaces button.active {
+.ws.active {
     color: #cba6f7;
 }
 
-#workspaces button:hover {
+.ws:hover {
     background: rgba(203, 166, 247, 0.2);
     color: #cdd6f4;
 }
